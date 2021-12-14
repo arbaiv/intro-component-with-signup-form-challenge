@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/arbaiv/intro-component-with-signup-form-challenge)
+- Live Site URL: (https://gallant-ride-ca1912.netlify.app/)
 
 ## My process
 
