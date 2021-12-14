@@ -12,6 +12,7 @@ var passwordError = document.getElementById("password-error");
 document.getElementById("form").addEventListener("submit", function(e){
     e.preventDefault();
 });
+
 //For First name validation
 fname.addEventListener("invalid", function(e){
     if(e.target.validity.valueMissing){
@@ -43,7 +44,6 @@ email.addEventListener("invalid", function(e){
         emailErrorText.textContent = "Email cannot be empty";
         emailError.className = "error-validate";
         email.classList.add("input-design-error");
-        console.log("error");
     } else if (e.target.validity.typeMismatch){
         e.target.setCustomValidity(" ");
         emailErrorText.textContent = "Looks like this is not an email";
@@ -67,4 +67,38 @@ password.addEventListener("invalid", function(e){
         password.classList.remove("input-design-error");
     }
 });
+// After submit event if input value is not empty, remove validation error
+fname.onblur = function(){
+    if(this.value !== ""){
+        if(fnameError.className === "error-validate"){
+            fnameError.className = "error-sec";
+            fname.classList.remove("input-design-error");
+        }
+    }
+};
+lname.onblur = function(){
+    if(this.value !== ""){
+        if(lnameError.className === "error-validate"){
+            lnameError.className = "error-sec";
+            lname.classList.remove("input-design-error");
+        }
+    }
+};
+email.onblur = function(){
+    if(this.value !== ""){
+        if(emailError.className === "error-validate"){
+            emailError.className = "error-sec";
+            email.classList.remove("input-design-error");
+        }
+    }
+};
+password.onblur = function(){
+    if(this.value !== ""){
+        if(passwordError.className === "error-validate"){
+            passwordError.className = "error-sec";
+            password.classList.remove("input-design-error");
+        }
+    }
+};
+
 
